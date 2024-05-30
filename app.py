@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask
 from module.pokenea_provider import get_random_pokenea_subset_1, get_random_pokenea_subset_2
 

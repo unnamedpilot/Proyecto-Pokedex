@@ -3,7 +3,7 @@ from module.pokenea_provider import get_random_pokenea_subset_1, get_random_poke
 
 app = Flask(__name__)
 
-docker_id = ""
+docker_id = "Ni idea de cual es el docker id"
 
 @app.route('/pokenea_subset_1')
 def random_pokenea():

@@ -10,12 +10,13 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 5000 available to the world outside this container
-EXPOSE 5000
+EXPOSE 80
 
 # Define environment variable
 ENV FLASK_APP=app.py
 
-# Run the application
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Make the script executable
+RUN chmod +x /app/start.sh
 
+# Set the entrypoint to the shell script
+ENTRYPOINT ["/app/start.sh"]

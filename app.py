@@ -1,9 +1,13 @@
 from flask import Flask
+
+from module.id_container_provider import read_container_id_from_file
 from module.pokenea_provider import get_random_pokenea_subset_1, get_random_pokenea_subset_2
 
 app = Flask(__name__)
 
-docker_id = "Ni idea de cual es el docker id"
+
+
+docker_id = read_container_id_from_file()
 
 @app.route('/pokenea_subset_1')
 def random_pokenea():

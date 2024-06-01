@@ -9,13 +9,13 @@ docker_id = "Ni idea de cual es el docker id"
 def random_pokenea():
     pokenea_information = get_random_pokenea_subset_1()
     pokenea_information['id_contenedor'] = docker_id
-    return get_random_pokenea_subset_1()
+    return pokenea_information
 
 @app.route('/pokenea_subset_2')
 def random_pokenea_representation():
     pokenea_information = get_random_pokenea_subset_2()
     pokenea_information['id_contenedor'] = docker_id
-    return get_random_pokenea_subset_1()
+    return pokenea_information
 
 
 if __name__ == '__main__':
